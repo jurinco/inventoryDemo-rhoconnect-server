@@ -36,7 +36,7 @@ class InventoryItem < Rhoconnect::Model::Base
     @result={}
     parsed.each do |item|
       puts "item is #{item}"
-      @result[item["inventory_item"]["id"].to_s] = item["inventory_item"]
+      @result[item["inventory_item"]["id"].to_s] = item
     end if parsed
     @result
   end
